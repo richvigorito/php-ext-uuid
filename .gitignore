@@ -1,21 +1,62 @@
-# the composer package lock file and install directory
-# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# /composer.lock
-/fuel/vendor
+# Ignore object files and build artifacts
+*.o
+*.lo
+*.la
+.libs/
+*.so
+*.dSYM/
+*.a
 
-# the fuelphp document
-/docs/
+# Ignore configuration and makefile artifacts
+Makefile
+Makefile.fragments
+Makefile.global
+Makefile.objects
+config.h
+config.nice
+config.log
+config.status
+configure
+aclocal.m4
+ltmain.sh
+libtool
+missing
+mkinstalldirs
+install-sh
+run-tests.php
 
-# you may install these packages with `oil package`.
-# http://fuelphp.com/docs/packages/oil/package.html
-# /fuel/packages/auth/
-# /fuel/packages/email/
-# /fuel/packages/oil/
-# /fuel/packages/orm/
-# /fuel/packages/parser/
+# Ignore build directory and generated files
+build/
+autom4te.cache/
+modules/
 
-# dynamically generated files
-/fuel/app/logs/*/*/*
-/fuel/app/cache/*/*
-/fuel/app/config/crypt.php
+# Ignore IDE/editor files
+.idea/
+.vscode/
+*.swp
+*~
+
+# Composer (if used)
+vendor/
+composer.lock
+
+# Docker (if building locally)
+php-ext-uuid.docker.*
+.docker/
+
+# Git
+*.orig
+
+# Logs and dumps
+*.log
+*.gz
+*.core
+
+# Ignore test output
+tests/tmp/
+tests/output/
+
+# CTags / Etags
+tags
+TAGS
+
