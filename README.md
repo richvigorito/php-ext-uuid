@@ -32,11 +32,14 @@ echo uuid::ksuid(), "\n";       // KSUID (27-character base62)
 echo uuid::ulid(), "\n";        // ULID (26-character base32)
 echo uuid::uuid128(), "\n";     // Raw 16-byte binary string
 ?>
+```
 
 ## Building and Installing Using Docker
-You can build and test the extension inside a Docker container. This example is adapted from bogkonstantin/php-extension-hello-world.
+You can build and test the extension inside a Docker container. 
 
-## Build Docker Image
+To build and install the extension on your local PHP installation, use the Docker container as a build environment, then copy the resulting .so file to your PHP extensions directory.
+
+### Build Docker Image
 ```bash
 git clone https://github.com/richvigorito/php-uuid-extension.git
 cd php-uuid-extension
@@ -44,13 +47,10 @@ cd php-uuid-extension
 docker build -t php-uuid-extension .
 ```
 
-## Run Tests Inside Container
+### Run Tests Inside Container
 ```bash 
 docker run --rm php-uuid-extension make test
 ```
-## Build and Install the Extension
-To build and install the extension on your local PHP installation, use the Docker container as a build environment, then copy the resulting .so file to your PHP extensions directory.
-
 ## Development Notes
 - Requires libuuid development headers (uuid/uuid.h) for some UUID implementations.
 - Snowflake implementation uses pthread mutex for thread safety.
