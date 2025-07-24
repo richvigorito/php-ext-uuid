@@ -58,6 +58,6 @@ docker run --rm php-uuid-extension make test
 - Compatible with PHP 7.4 and later.
 
 Credits
-Dockerfile structure and build approach inspired by [php extension hellow word](bogkonstantin/php-extension-hello-world)
+Dockerfile structure and build approach inspired by [dockekerized php extension hellow world](https://github.com/bogkonstantin/php-extension-hello-world)
 
 UUID generation algorithms adapted and implemented based on relevant specifications and public resources.
